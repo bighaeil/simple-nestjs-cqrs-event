@@ -5,10 +5,17 @@ import { CreateUserHandler } from './handlers/create-user.handler';
 import { GetUsersHandler } from './handlers/get-users.handler';
 import { UserController } from './user.controller';
 import { UserService } from './user.service';
+import { UpdateUserNameHandler } from './handlers/update-user-name.handler';
 
 @Module({
   imports: [CqrsModule],
-  providers: [UserRepository, CreateUserHandler, GetUsersHandler, UserService],
+  providers: [
+    UserRepository,
+    CreateUserHandler,
+    GetUsersHandler,
+    UserService,
+    UpdateUserNameHandler,
+  ],
   controllers: [UserController],
 })
 export class UserModule {}
