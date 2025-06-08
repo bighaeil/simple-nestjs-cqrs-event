@@ -23,8 +23,8 @@ curl -X GET 'http://localhost:3000/users'
 ```shell
 curl -X POST 'http://localhost:3000/users' -H "Content-Type: application/json" -d '{
   "id": "1",
-  "name": "name",
-  "email" : "email@example.com"
+  "name": "Alice",
+  "email" : "alice@example.com"
 }'
 ```
 
@@ -34,9 +34,9 @@ curl -X POST 'http://localhost:3000/users' -H "Content-Type: application/json" -
 curl -X POST 'http://localhost:3000/posts' -H "Content-Type: application/json" -d '{
   "id": "1",
   "userId": "1",
-  "authorName": "author name",
-  "title": "title",
-  "content": "content"
+  "authorName": "Alice",
+  "title": "CQRS",
+  "content": "Intro to CQRS"
 }'
 ```
 
@@ -50,6 +50,6 @@ curl -X GET 'http://localhost:3000/posts/users/1'
 
 ```shell
 curl -X PUT 'http://localhost:3000/users/1' -H "Content-Type: application/json" -d '{
-  "newName": "new name"
+  "newName": "Bob"
 }'
 ```
